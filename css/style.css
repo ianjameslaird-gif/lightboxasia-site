@@ -50,3 +50,12 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 .logos img.gs{filter:grayscale(1) brightness(1.6) contrast(1.1)}
 
 .opts a{color:#f5c76b;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(245,199,107,.5)}.opts a:hover{border-bottom-color:#f5c76b}
+
+.tbl{overflow-x:auto;margin-top:28px;border:1px solid #3a3020;border-radius:14px}
+.tbl table{width:100%;border-collapse:collapse;min-width:560px}
+.tbl th{text-align:left;color:#f5c76b;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;background:#17171c;position:sticky;top:0}
+.tbl td{padding:13px 18px;border-top:1px solid #26262d}
+.tbl tbody tr:hover{background:rgba(245,199,107,.07)}
+.tbl td:nth-child(2){font-weight:700}
+.cta-line{margin-top:26px;text-align:center}
+#sizes{scroll-margin-top:70px}
