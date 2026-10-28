@@ -59,3 +59,5 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 .tbl td:nth-child(2){font-weight:700}
 .cta-line{margin-top:26px;text-align:center}
 #sizes{scroll-margin-top:70px}
+.logos li.lk{gap:10px}
+.logos img.tall{height:48px}@media(max-width:600px){.logos img.tall{height:36px}}
