@@ -15,3 +15,26 @@ lb.addEventListener('touchend',e=>{if(sx===null)return;const d=e.changedTouches[
 document.getElementById('enq').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
 const t=`Hi Lightbox Singapore, I'd like to enquire.\nName: ${f.get('name')}\nCompany: ${f.get('company')}\nInterested in: ${f.get('type')} (${f.get('mode')})\nEvent & dates: ${f.get('event')}\nDetails: ${f.get('msg')}`;
 window.open('https://wa.me/6593423910?text='+encodeURIComponent(t),'_blank')};
+
+/* neon letter effect on hero headline */
+(function(){
+const h=document.querySelector('.hero h1')||document.querySelector('h1');if(!h)return;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const letters=[];
+(function wrap(n){[...n.childNodes].forEach(c=>{
+ if(c.nodeType===3){const f=document.createDocumentFragment();
+  [...c.textContent].forEach(ch=>{if(ch===' '){f.appendChild(document.createTextNode(' '));return}
+   const s=document.createElement('span');s.className='nl';s.textContent=ch;f.appendChild(s);letters.push(s)});
+  c.replaceWith(f)}
+ else if(c.nodeType===1&&!c.classList.contains('h1s'))wrap(c)})})(h);
+const neon=['#ff2bd6','#00f0ff','#39ff14','#fff01f','#ff6a00','#b026ff','#ff3131'];
+let k=0;
+function hit(x,y){letters.forEach(s=>{const r=s.getBoundingClientRect();
+ const dx=x-(r.left+r.width/2),dy=y-(r.top+r.height/2);
+ if(Math.hypot(dx,dy)<Math.max(48,r.height*.7)){
+  const c=neon[(k++)%neon.length];
+  s.style.color=c;s.style.textShadow='0 0 8px '+c+',0 0 22px '+c+',0 0 44px '+c;
+  clearTimeout(s._t);s._t=setTimeout(()=>{s.style.color='';s.style.textShadow=''},1100)}})}
+h.addEventListener('pointermove',e=>hit(e.clientX,e.clientY));
+h.addEventListener('touchmove',e=>{const t=e.touches[0];hit(t.clientX,t.clientY)},{passive:true});
+})();
