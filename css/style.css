@@ -62,3 +62,5 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 .logos li.lk{gap:10px}
 .logos img.tall{height:48px}@media(max-width:600px){.logos img.tall{height:36px}}
 .logos img.sm{height:28px}@media(max-width:600px){.logos img.sm{height:22px}}
+
+#jobs .logos{margin-top:0;padding-top:0;border-top:0}#jobs{padding-top:70px;padding-bottom:50px}
