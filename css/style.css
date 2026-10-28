@@ -48,3 +48,5 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 .logos li:hover img,.logos li:hover .wm{opacity:1}
 @media(max-width:600px){.logos ul{gap:22px 28px}.logos li{height:30px;flex:0 0 40%;justify-content:center}.logos img{height:30px;max-width:120px}.logos .wm{font-size:.8rem}}
 .logos img.gs{filter:grayscale(1) brightness(1.6) contrast(1.1)}
+
+.opts a{color:#f5c76b;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(245,199,107,.5)}.opts a:hover{border-bottom-color:#f5c76b}
