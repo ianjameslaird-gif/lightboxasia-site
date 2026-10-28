@@ -79,5 +79,5 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 @media(max-width:600px){.logos li{height:52px;padding:8px 12px;flex:0 0 42%}.logos img{height:34px;max-width:120px}.logos img.tall{height:38px}}
 h1 .nl{display:inline-block;transition:color 1s ease,text-shadow 1s ease;cursor:default}
 .hero .hc{max-width:none;width:100%}
-.hero h1{white-space:nowrap;font-size:clamp(1.5rem,8.4vw,5rem)}
+.hero h1{white-space:nowrap;font-size:clamp(1.3rem,6.6vw,5rem)}
 .hero h1 .h1s{white-space:normal;max-width:620px}
