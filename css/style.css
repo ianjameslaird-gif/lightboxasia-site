@@ -61,3 +61,4 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 #sizes{scroll-margin-top:70px}
 .logos li.lk{gap:10px}
 .logos img.tall{height:48px}@media(max-width:600px){.logos img.tall{height:36px}}
+.logos img.sm{height:28px}@media(max-width:600px){.logos img.sm{height:22px}}
