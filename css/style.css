@@ -38,3 +38,13 @@ footer{text-align:center;padding:30px;opacity:.6;font-size:.9rem}
 @media(max-width:600px){.lb{padding:12px}.lb-box{padding:8px}.lb-x{top:-10px;right:-6px}.lb-prev{left:14px}.lb-next{right:14px}}
 
 .clients{margin-top:28px;text-align:center;opacity:.85;line-height:1.8;font-size:1.05rem}.clients b{display:block;color:#f5c76b;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:6px}
+
+.logos{margin-top:48px;padding-top:32px;border-top:1px solid rgba(245,199,107,.2);text-align:center}
+.logos-cap{color:#f5c76b;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:22px}
+.logos ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px 44px}
+.logos li{display:flex;align-items:center;height:40px}
+.logos img{height:40px;max-width:150px;object-fit:contain;filter:brightness(0) invert(1);opacity:.75;transition:opacity .25s}
+.logos .wm{color:#fff;opacity:.75;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;transition:opacity .25s}
+.logos li:hover img,.logos li:hover .wm{opacity:1}
+@media(max-width:600px){.logos ul{gap:22px 28px}.logos li{height:30px;flex:0 0 40%;justify-content:center}.logos img{height:30px;max-width:120px}.logos .wm{font-size:.8rem}}
+.logos img.gs{filter:grayscale(1) brightness(1.6) contrast(1.1)}
