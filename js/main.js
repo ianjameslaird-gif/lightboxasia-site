@@ -2,7 +2,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 const nav=document.querySelector('nav');document.querySelector('.burger').onclick=()=>nav.classList.toggle('open');
 nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
 const lb=document.querySelector('.lb'),li=lb.querySelector('img'),lc=lb.querySelector('.lb-count'),gs=[...document.querySelectorAll('.g')];let ci=0,lastFocus=null;
-function show(i){ci=(i+gs.length)%gs.length;li.classList.remove('in');li.src=gs[ci].dataset.src;lc.textContent=(ci+1)+' / '+gs.length;li.onload=()=>li.classList.add('in')}
+function show(i){ci=(i+gs.length)%gs.length;li.classList.remove('in');const im=gs[ci].querySelector('img');li.src=gs[ci].dataset.src;li.alt=im?im.alt:'';lc.textContent=(ci+1)+' / '+gs.length;li.onload=()=>li.classList.add('in')}
 function openLb(i){lastFocus=document.activeElement;lb.hidden=false;document.body.style.overflow='hidden';show(i);requestAnimationFrame(()=>lb.classList.add('open'));lb.querySelector('.lb-x').focus()}
 function closeLb(){lb.classList.remove('open');document.body.style.overflow='';setTimeout(()=>{lb.hidden=true;li.removeAttribute('src')},200);if(lastFocus)lastFocus.focus()}
 gs.forEach((b,i)=>b.onclick=()=>openLb(i));
